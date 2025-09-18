@@ -12,9 +12,9 @@ import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
 // Change this to your anniversary date
-const ANNIVERSARY_DATE = "2025-09-27T00:00:00"
+const ANNIVERSARY_DATE = "2025-09-18T23:10:00"
 // Change this to the date you got together
-const TOGETHER_DATE = "2024-10-14T00:00:00"
+const TOGETHER_DATE = "2024-10-22T00:00:00"
 
 export default function Home() {
   const [loading, setLoading] = useState(true)
