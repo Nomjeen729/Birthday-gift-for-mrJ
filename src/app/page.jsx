@@ -46,14 +46,17 @@ export default function Home() {
   }
 
   const handleReveal = () => {
-    setShowTapToReveal(false)
-    setShowContent(true)
+  setShowTapToReveal(false)
+  setShowContent(true)
 
-    // Uncomment this if you want to add a background song
-    setTimeout(() => {0:00:45}
-       setPlaySong(true)
-     }, 1000);
-  }
+  setTimeout(() => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 45 // 45 секундээс эхлүүлнэ
+      audioRef.current.play()
+    }
+    setPlaySong(true)
+  }, 1000)
+}
 
   // Add your photos here
   const photos = [
