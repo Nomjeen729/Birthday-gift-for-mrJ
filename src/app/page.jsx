@@ -7,7 +7,7 @@ import Countdown from "@/components/Countdown"
 import DaysTogether from "@/components/DaysTogether"
 import PhotoGallery from "@/components/PhotoGallery"
 import Message from "@/components/Message"
-// import MusicPlayer from "@/components/MusicPlayer" // Uncomment this if you want to add a background song
+import MusicPlayer from "/components/MusicPlayer" // Uncomment this if you want to add a background song
 import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
@@ -20,7 +20,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true)
   const [showContent, setShowContent] = useState(false)
   const [showTapToReveal, setShowTapToReveal] = useState(false)
-  // const [playSong, setPlaySong] = useState(false) // Uncomment this if you want to add a background song
+  const [playSong, setPlaySong] = useState(false) // Uncomment this if you want to add a background song
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -50,21 +50,21 @@ export default function Home() {
     setShowContent(true)
 
     // Uncomment this if you want to add a background song
-    // setTimeout(() => {
-    //   setPlaySong(true)
-    // }, 1000);
+    setTimeout(() => {0:00:45}
+       setPlaySong(true)
+     }, 1000);
   }
 
   // Add your photos here
   const photos = [
-    { src: "/image.png", alt: "Us together" },
-    { src: "/image2.png", alt: "Special moment" },
-    { src: "/image.png", alt: "Happy times" },
-    { src: "/image2.png", alt: "Memories" },
+    { src: "/IMG_0155.jpeg", alt: "Саанжигийн төрсөн өдрөөр" },
+    { src: "/IMG_0155.jpeg", alt: "Хэзээ ч мартагдашгүй пиццатай зайсан гаралт" },
+    { src: "/IMG_9155.png", alt: "Өвлийн ногоорсон өдрүүд" },
+    { src: "/IMG_9166.png", alt: "Ааа~ Нини рүү бичлэг явуулъя" },
   ]
 
   // Change this message according to you
-  const message = `Dear Love,
+  const message = `Хайрт Жаагийдаа,
 This journey with you has been the most beautiful adventure of my life. Every moment spent with you feels like a blessing, and I cherish each day we've been together.
 From our first meeting to today, you've filled my life with joy, laughter, and unconditional love. Your smile brightens my darkest days, and your love gives me strength when I need it most.
 As we celebrate another year together, I want you to know that my love for you grows stronger with each passing day. You are my best friend, my confidant, and my soulmate.
@@ -115,9 +115,9 @@ Me`
               <div className="absolute -bottom-28 -right-14 w-32 h-32 text-5xl animate-float-delay">🌺</div>
 
               <h1 className="text-4xl md:text-5xl py-1.5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 mb-4 animate-gradient">
-                Our Anniversary is Coming!
+                Жаахан л хүлээчих!
               </h1>
-              <p className="text-xl text-purple-700 font-medium">The countdown to our special day ❤️</p>
+              <p className="text-xl text-purple-700 font-medium">Бидний чамайг гэх хайрыг мэдмээр байна уу? < ❤️</p>
             </motion.div>
 
             <Countdown targetDate={ANNIVERSARY_DATE} onComplete={handleCountdownComplete} />
@@ -126,7 +126,7 @@ Me`
           <TapToReveal key="tap-to-reveal" onReveal={handleReveal} />) : (
           <>
             {/* Uncomment this if you want to add a background song */}
-            {/* <MusicPlayer playSong={playSong} />  */}
+            /* <MusicPlayer playSong={playSong} />  */
             <motion.div
               key="content"
               initial={{ opacity: 0 }}
@@ -149,9 +149,9 @@ Me`
                 </div>
 
                 <h1 className="text-4xl md:text-6xl py-1 md:py-2 px-6 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 mb-3 animate-gradient">
-                  Happy Anniversary!
+                  Happy Birthday Mr.J!
                 </h1>
-                <p className="text-xl text-purple-700 font-medium">Every moment with you is a blessing ❤️</p>
+                <p className="text-xl text-purple-700 font-medium">Хүндэт торгон хилийн ирээдүйн эхнэр чамдаа ❤️</p>
               </motion.div>
 
               <DaysTogether startDate={TOGETHER_DATE} animationDuration={3} />
@@ -166,7 +166,8 @@ Me`
                 transition={{ delay: 1.5 }}
                 className="text-center mt-16 mb-8 text-pink-600"
               >
-                <p className="text-lg font-medium">Made with ❤️ by @anujbuilds</p>
+                <p className="text-lg font-medium">Made with ❤️ by Nomjeen</p>
+                <p className="text-lg font-medium">Idea 🧠 by Myadagaa</p>
               </motion.footer>
             </motion.div>
           </>
