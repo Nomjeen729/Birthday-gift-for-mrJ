@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Happy Anniversary!",
+  title: "Happy Birthday Mr.J!",
   description: "A celebration of our love",
 }
 
