@@ -7,12 +7,12 @@ import Countdown from "@/components/Countdown"
 import DaysTogether from "@/components/DaysTogether"
 import PhotoGallery from "@/components/PhotoGallery"
 import Message from "@/components/Message"
-import MusicPlayer from "/components/MusicPlayer" // Uncomment this if you want to add a background song
+import MusicPlayer from "@/components/MusicPlayer" // Uncomment this if you want to add a background song
 import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
 // Change this to your anniversary date
-const ANNIVERSARY_DATE = "2025-09-19T20:00:00"
+const ANNIVERSARY_DATE = "2025-09-19T22:40:00"
 // Change this to the date you got together
 const TOGETHER_DATE = "2024-10-22T00:00:00"
 
@@ -46,24 +46,21 @@ export default function Home() {
   }
 
   const handleReveal = () => {
-  setShowTapToReveal(false)
-  setShowContent(true)
+    setShowTapToReveal(false)
+    setShowContent(true)
 
-  setTimeout(() => {
-    if (audioRef.current) {
-      audioRef.current.currentTime = 45 // 45 секундээс эхлүүлнэ
-      audioRef.current.play()
-    }
-    setPlaySong(true)
-  }, 1000)
-}
+    // Uncomment this if you want to add a background song
+     setTimeout(() => {
+       setPlaySong(true)
+     }, 1000);
+  }
 
   // Add your photos here
   const photos = [
     { src: "/IMG_0155.jpeg", alt: "Саанжигийн төрсөн өдрөөр" },
-    { src: "/IMG_0155.jpeg", alt: "Хэзээ ч мартагдашгүй пиццатай зайсан гаралт" },
-    { src: "/IMG_6886.png", alt: "Өвлийн ногоорсон өдрүүд" },
-    { src: "/IMG_9167.png", alt: "Ааа~ Нини рүү бичлэг явуулъя" },
+    { src: "/IMG_2595.jpeg", alt: "Бидний домогт пиццатай зайсан гаралт" },
+    { src: "/IMG_6886.jpeg", alt: "Өвлийн тэр нэгэн ногоорсон ногоон өдрүүд" },
+    { src: "/IMG_9167.jpeg", alt: "Залуу хүн байж орж гараач, заяаны хань чинь зам дээр хэвтэж байгаа" },
   ]
 
   // Change this message according to you
@@ -120,7 +117,7 @@ Me`
               <h1 className="text-4xl md:text-5xl py-1.5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 mb-4 animate-gradient">
                 Жаахан л хүлээчих!
               </h1>
-              <p className="text-xl text-purple-700 font-medium">Бидний чамайг гэх хайрыг мэдмээр байна уу? ❤</p>
+              <p className="text-xl text-purple-700 font-medium">Бидний чамайг гэх хайрыг мэдмээр байна уу? ❤️</p>
             </motion.div>
 
             <Countdown targetDate={ANNIVERSARY_DATE} onComplete={handleCountdownComplete} />
@@ -129,7 +126,7 @@ Me`
           <TapToReveal key="tap-to-reveal" onReveal={handleReveal} />) : (
           <>
             {/* Uncomment this if you want to add a background song */}
-            /* <MusicPlayer playSong={playSong} />  */
+            {/* <MusicPlayer playSong={playSong} />  */}
             <motion.div
               key="content"
               initial={{ opacity: 0 }}
@@ -152,9 +149,9 @@ Me`
                 </div>
 
                 <h1 className="text-4xl md:text-6xl py-1 md:py-2 px-6 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 mb-3 animate-gradient">
-                  Happy Birthday Mr.J!
+                  Happy Anniversary!
                 </h1>
-                <p className="text-xl text-purple-700 font-medium">Хүндэт торгон хилийн ирээдүйн эхнэр чамдаа ❤️</p>
+                <p className="text-xl text-purple-700 font-medium">Торгон хилийн ирээдүйн гэргийд зориулав ❤️</p>
               </motion.div>
 
               <DaysTogether startDate={TOGETHER_DATE} animationDuration={3} />
