@@ -12,7 +12,7 @@ import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
 // Change this to your anniversary date
-const ANNIVERSARY_DATE = "2025-09-19T19:14:00"
+const ANNIVERSARY_DATE = "2025-09-19T19:18:00"
 // Change this to the date you got together
 const TOGETHER_DATE = "2024-10-22T00:00:00"
 
