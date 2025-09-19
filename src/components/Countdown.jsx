@@ -174,7 +174,7 @@ export default function Countdown({ targetDate, onComplete }) {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1 }}
             >
-                Until our special day ❤️
+                Бидний чухал өдөр хүртэл... ❤️
             </motion.p>
         </div>
     )
