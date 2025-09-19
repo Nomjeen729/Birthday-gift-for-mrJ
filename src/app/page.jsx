@@ -12,7 +12,7 @@ import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
 // Change this to your anniversary date
-const ANNIVERSARY_DATE = "2025-09-19T19:18:00"
+const ANNIVERSARY_DATE = "2025-09-19T20:00:00"
 // Change this to the date you got together
 const TOGETHER_DATE = "2024-10-22T00:00:00"
 
@@ -62,8 +62,8 @@ export default function Home() {
   const photos = [
     { src: "/IMG_0155.jpeg", alt: "Саанжигийн төрсөн өдрөөр" },
     { src: "/IMG_0155.jpeg", alt: "Хэзээ ч мартагдашгүй пиццатай зайсан гаралт" },
-    { src: "/IMG_9155.png", alt: "Өвлийн ногоорсон өдрүүд" },
-    { src: "/IMG_9166.png", alt: "Ааа~ Нини рүү бичлэг явуулъя" },
+    { src: "/IMG_6886.png", alt: "Өвлийн ногоорсон өдрүүд" },
+    { src: "/IMG_9167.png", alt: "Ааа~ Нини рүү бичлэг явуулъя" },
   ]
 
   // Change this message according to you
@@ -120,7 +120,7 @@ Me`
               <h1 className="text-4xl md:text-5xl py-1.5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 mb-4 animate-gradient">
                 Жаахан л хүлээчих!
               </h1>
-              <p className="text-xl text-purple-700 font-medium">Бидний чамайг гэх хайрыг мэдмээр байна уу? < ❤️</p>
+              <p className="text-xl text-purple-700 font-medium">Бидний чамайг гэх хайрыг мэдмээр байна уу? {"< ❤️"}
             </motion.div>
 
             <Countdown targetDate={ANNIVERSARY_DATE} onComplete={handleCountdownComplete} />
