@@ -12,7 +12,7 @@ import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
 // Change this to your anniversary date
-const ANNIVERSARY_DATE = "2025-09-21T14:42:00"
+const ANNIVERSARY_DATE = "2025-09-21T14:48:00"
 // Change this to the date you got together
 const TOGETHER_DATE = "2006-09-29T00:00:00"
 
@@ -111,9 +111,9 @@ export default function Home() {
               <div className="absolute -bottom-28 -right-14 w-32 h-32 text-5xl animate-float-delay">🌺</div>
 
               <h1 className="text-4xl md:text-5xl py-1.5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 mb-4 animate-gradient">
-                Our Anniversary is Coming!
+                Бидний гомдлыг тайлтал амьсгалахгүй!
               </h1>
-              <p className="text-xl text-purple-700 font-medium">Бидний чухал өдөр хүртэл... ❤️</p>
+              <p className="text-xl text-purple-700 font-medium">Бидний чамайг гэх хайрыг мэдмээр байна уу? ❤️</p>
             </motion.div>
 
             <Countdown targetDate={ANNIVERSARY_DATE} onComplete={handleCountdownComplete} />
