@@ -81,7 +81,7 @@ export default function DaysTogether({ startDate, animationDuration = 3 }) {
                     transition={{ delay: 0.3 }}
                     className="text-3xl md:text-4xl md:py-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 text-center mb-10 animate-gradient"
                 >
-                    Our Beautiful Journey Together
+                    Хүн болохын төлөөх спермүүдийн өрсөлдөөнт тэмцэлд ялаад
                 </motion.h2>
 
                 <div className="flex flex-col items-center justify-center">
@@ -134,7 +134,7 @@ export default function DaysTogether({ startDate, animationDuration = 3 }) {
                         transition={{ delay: 0.5 }}
                         className="text-2xl md:text-3xl text-pink-500 font-medium mb-8"
                     >
-                        Өдрийг өөрсдийн дурсамжаар дүүргэжээ
+                        Өдөр болжээ чи минь
                     </motion.div>
 
                     <motion.div
@@ -150,8 +150,10 @@ export default function DaysTogether({ startDate, animationDuration = 3 }) {
                         transition={{ delay: 1.2 }}
                         className="text-center text-lg text-gray-600 max-w-2xl"
                     >
-                        Every single day has been a blessing. From our first hello to today, each moment with you has been magical.
-                        Here's to countless more days filled with love, laughter, and beautiful memories!
+                        Хамгаас хайрт чамдаа, энэ хорвоод хэн хүний хайрыг татсан гайхалтай 
+                        оршихуй болон мэндэлсэн өдрийн мэнд хүргэе. 19 нас гэх амьдралд ганц 
+                        тохиох онцгой нэгэн үеийн чинь нэг хэсэг болсон нь бидний хувьд үнэхээр 
+                        нэр төрийн хэрэг байлаа. Чи биднийхээ сэтгэлд оршиж, бодолд өнждөг тийм л чухал хүн шүү!
                     </motion.p>
 
                     <motion.div
