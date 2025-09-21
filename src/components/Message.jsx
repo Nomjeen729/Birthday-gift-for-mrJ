@@ -49,7 +49,7 @@ export default function Message({ message }) {
                 transition={{ delay: 0.3 }}
                 className="text-3xl md:text-4xl md:py-1 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 text-center mb-10 animate-gradient"
             >
-                A Letter From My Heart
+                Бидний зүрхний зүүн ховдлоос урсах үгс
             </motion.h2>
 
             <motion.div
