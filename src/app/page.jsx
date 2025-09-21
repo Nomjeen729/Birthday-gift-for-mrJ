@@ -50,7 +50,7 @@ export default function Home() {
     setShowContent(true)
 
     // Uncomment this if you want to add a background song
-     setTimeout(() => {45;
+     setTimeout(() => {
        setPlaySong(true)
      }, 1000);
   }
@@ -122,7 +122,7 @@ export default function Home() {
           <TapToReveal key="tap-to-reveal" onReveal={handleReveal} />) : (
           <>
             {/* Uncomment this if you want to add a background song */}
-            {/* <MusicPlayer playSong={playSong} />  */}
+            <MusicPlayer playSong={playSong} />
             <motion.div
               key="content"
               initial={{ opacity: 0 }}
