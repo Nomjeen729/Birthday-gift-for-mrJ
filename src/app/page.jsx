@@ -7,20 +7,20 @@ import Countdown from "@/components/Countdown"
 import DaysTogether from "@/components/DaysTogether"
 import PhotoGallery from "@/components/PhotoGallery"
 import Message from "@/components/Message"
-// import MusicPlayer from "@/components/MusicPlayer" // Uncomment this if you want to add a background song
+import MusicPlayer from "@/components/MusicPlayer" // Uncomment this if you want to add a background song
 import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
 // Change this to your anniversary date
-const ANNIVERSARY_DATE = "2025-05-25T00:00:00"
+const ANNIVERSARY_DATE = "2025-09-21T14:05:00"
 // Change this to the date you got together
-const TOGETHER_DATE = "2022-01-01T00:00:00"
+const TOGETHER_DATE = "2006-09-29T00:00:00"
 
 export default function Home() {
   const [loading, setLoading] = useState(true)
   const [showContent, setShowContent] = useState(false)
   const [showTapToReveal, setShowTapToReveal] = useState(false)
-  // const [playSong, setPlaySong] = useState(false) // Uncomment this if you want to add a background song
+  const [playSong, setPlaySong] = useState(false) // Uncomment this if you want to add a background song
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -50,27 +50,23 @@ export default function Home() {
     setShowContent(true)
 
     // Uncomment this if you want to add a background song
-    // setTimeout(() => {
-    //   setPlaySong(true)
-    // }, 1000);
+     setTimeout(() => {45;
+       setPlaySong(true)
+     }, 1000);
   }
 
   // Add your photos here
   const photos = [
-    { src: "/image.png", alt: "Us together" },
-    { src: "/image2.png", alt: "Special moment" },
-    { src: "/image.png", alt: "Happy times" },
-    { src: "/image2.png", alt: "Memories" },
+    { src: "/IMG_0155.jpeg", alt: "Саанжигийн төрсөн өдрөөр" },
+    { src: "/IMG_2595.jpeg", alt: "Бидний домогт пиццатай зайсан гаралт" },
+    { src: "/IMG_6886.jpeg", alt: "Өвлийн тэр нэгэн ногоорсон ногоон өдрүүд" },
+    { src: "/IMG_9167.jpeg", alt: "Залуу хүн байж орж гараач, заяаны хань чинь зам дээр хэвтэж байгаа" },
   ]
 
   // Change this message according to you
-  const message = `Dear Love,
-This journey with you has been the most beautiful adventure of my life. Every moment spent with you feels like a blessing, and I cherish each day we've been together.
-From our first meeting to today, you've filled my life with joy, laughter, and unconditional love. Your smile brightens my darkest days, and your love gives me strength when I need it most.
-As we celebrate another year together, I want you to know that my love for you grows stronger with each passing day. You are my best friend, my confidant, and my soulmate.
-Happy Anniversary, my love! Here's to many more years of creating beautiful memories together.
-With all my heart,
-Me`
+  const message = `Хайрт Жаагийдаа, 
+Чи бид “Хоол хүмүүсийг холбодог” гэх үгийг үнэн гэдгийг амьдрал дээр баталсан найзууд. Хэдий салаа замын эрхээр гурвуулаа салсан ч бидний зүрх сэтгэл үргэлж нэгэн хэмнэлд цохилно. Бидэнтэй нөхөрлөдөгт, хааяа нэг цохиод авдагт, хамтдаа хоол иддэгт, сэтгэлээр унасан үед инээлгэдэгт, халамжилдагт, дэмждэгт гээд бидний амьдралд орж ирсэнд, Жаргалсүрэн гэх хүн энэ дэлхий дээр оршин буйд баярлалаа. Хэдий нэг сургуульд орж чадаагүй ч их сургуульд суралцах 3 жилийн хугацаагаа амжилттай дуусгачихаад хамтдаа эх орондоо очоод Монголынхоо бүх караокег дуусгацгаая! Чамдаа сар луу яваад эргээд ирэх хэмжээний их хайртай шүү булдруу минь <3
+Тулгын гурван чулууны хоёр чулуунаас нь хаха.`
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-gradient-to-br from-pink-100 via-purple-50 to-blue-100">
@@ -117,7 +113,7 @@ Me`
               <h1 className="text-4xl md:text-5xl py-1.5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 mb-4 animate-gradient">
                 Our Anniversary is Coming!
               </h1>
-              <p className="text-xl text-purple-700 font-medium">The countdown to our special day ❤️</p>
+              <p className="text-xl text-purple-700 font-medium">Бидний чухал өдөр хүртэл... ❤️</p>
             </motion.div>
 
             <Countdown targetDate={ANNIVERSARY_DATE} onComplete={handleCountdownComplete} />
@@ -151,7 +147,7 @@ Me`
                 <h1 className="text-4xl md:text-6xl py-1 md:py-2 px-6 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 mb-3 animate-gradient">
                   Happy Anniversary!
                 </h1>
-                <p className="text-xl text-purple-700 font-medium">Every moment with you is a blessing ❤️</p>
+                <p className="text-xl text-purple-700 font-medium">Торгон хилийн ирээдүйн гэргийд зориулав ❤️</p>
               </motion.div>
 
               <DaysTogether startDate={TOGETHER_DATE} animationDuration={3} />
@@ -166,7 +162,7 @@ Me`
                 transition={{ delay: 1.5 }}
                 className="text-center mt-16 mb-8 text-pink-600"
               >
-                <p className="text-lg font-medium">Made with ❤️ by @anujbuilds</p>
+                <p className="text-lg font-medium">Made with ❤️ by Nomjeen and Myadagaa</p>
               </motion.footer>
             </motion.div>
           </>
