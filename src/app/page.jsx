@@ -12,7 +12,7 @@ import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
 // Change this to your anniversary date
-const ANNIVERSARY_DATE = "2025-09-21T14:40:00"
+const ANNIVERSARY_DATE = "2025-09-21T14:42:00"
 // Change this to the date you got together
 const TOGETHER_DATE = "2006-09-29T00:00:00"
 
@@ -122,7 +122,7 @@ export default function Home() {
           <TapToReveal key="tap-to-reveal" onReveal={handleReveal} />) : (
           <>
             {/* Uncomment this if you want to add a background song */}
-            {* <MusicPlayer playSong={playSong} />  */}
+            {/* <MusicPlayer playSong={playSong} />  */}
             <motion.div
               key="content"
               initial={{ opacity: 0 }}
