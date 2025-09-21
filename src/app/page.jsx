@@ -12,7 +12,7 @@ import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
 // Change this to your anniversary date
-const ANNIVERSARY_DATE = "2025-09-21T14:05:00"
+const ANNIVERSARY_DATE = "2025-09-21T14:40:00"
 // Change this to the date you got together
 const TOGETHER_DATE = "2006-09-29T00:00:00"
 
@@ -145,7 +145,7 @@ export default function Home() {
                 </div>
 
                 <h1 className="text-4xl md:text-6xl py-1 md:py-2 px-6 font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 mb-3 animate-gradient">
-                  Happy Anniversary!
+                  Happy Birthday Mr.J!
                 </h1>
                 <p className="text-xl text-purple-700 font-medium">Торгон хилийн ирээдүйн гэргийд зориулав ❤️</p>
               </motion.div>
