@@ -134,7 +134,7 @@ export default function DaysTogether({ startDate, animationDuration = 3 }) {
                         transition={{ delay: 0.5 }}
                         className="text-2xl md:text-3xl text-pink-500 font-medium mb-8"
                     >
-                        Өдөр болжээ чи минь
+                        өдөр болжээ чи минь
                     </motion.div>
 
                     <motion.div
