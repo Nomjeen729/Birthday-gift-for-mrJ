@@ -9,9 +9,15 @@ export default function MusicPlayer({ playSong }) {
   const audioRef = useRef(null)
 
   useEffect(() => {
-    audioRef.current = new Audio("/Lil Thug E - Odoo (Official Music Video).mp3")
+    audioRef.current = new Audio("/bg.mp3")
     audioRef.current.loop = true
     audioRef.current.volume = 0.5
+    audioRef.current.muted = true // эхэнд mute
+
+    // Autoplay оролдлого
+    if (playSong) {
+      audioRef.current.play().catch(err => console.error("Autoplay blocked:", err))
+    }
 
     return () => {
       if (audioRef.current) {
@@ -25,16 +31,12 @@ export default function MusicPlayer({ playSong }) {
     const audio = audioRef.current
     if (!audio) return
 
-    if (playSong) {
+    if (playSong && !isPlaying) {
+      audio.currentTime = 45 // 45 секундээс эхлэх
+      audio.muted = false
       audio.play()
-        .then(() => {
-          audio.currentTime = 45 // ⏩ 45 секундээс эхлүүлэх
-          setIsPlaying(true)
-        })
+        .then(() => setIsPlaying(true))
         .catch(err => console.error("Playback error:", err))
-    } else {
-      audio.pause()
-      setIsPlaying(false)
     }
   }, [playSong])
 
@@ -46,11 +48,10 @@ export default function MusicPlayer({ playSong }) {
       audio.pause()
       setIsPlaying(false)
     } else {
+      audio.currentTime = 45
+      audio.muted = false
       audio.play()
-        .then(() => {
-          audio.currentTime = 45 // ⏩ товчоор play хийсэн ч 45 секундээс эхэлнэ
-          setIsPlaying(true)
-        })
+        .then(() => setIsPlaying(true))
         .catch(err => console.error("Playback error:", err))
     }
   }
@@ -72,19 +73,12 @@ export default function MusicPlayer({ playSong }) {
         <motion.div
           animate={
             isPlaying
-              ? {
-                  scale: [1, 1.2, 1],
-                  rotate: [0, 5, 0, -5, 0],
-                }
+              ? { scale: [1, 1.2, 1], rotate: [0, 5, 0, -5, 0] }
               : { scale: 1 }
           }
           transition={
             isPlaying
-              ? {
-                  duration: 1.5,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                }
+              ? { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
               : {}
           }
         >
