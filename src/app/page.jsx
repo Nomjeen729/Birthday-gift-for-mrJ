@@ -11,7 +11,7 @@ import MusicPlayer from "@/components/MusicPlayer"
 import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
-const ANNIVERSARY_DATE = "2025-09-21T16:02:00"
+const ANNIVERSARY_DATE = "2025-09-21T16:20:00"
 const TOGETHER_DATE = "2006-09-29T00:00:00"
 
 export default function Home() {
