@@ -1,10 +1,23 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { Volume2, VolumeX } from "lucide-react"
 
-export default function MusicPlayer({ playSong }) {
+// Components
+import Loader from "@/components/Loader"
+import Countdown from "@/components/Countdown"
+import DaysTogether from "@/components/DaysTogether"
+import PhotoGallery from "@/components/PhotoGallery"
+import Message from "@/components/Message"
+import FloatingElements from "@/components/FloatingElements"
+import TapToReveal from "@/components/TapToReveal"
+
+const ANNIVERSARY_DATE = "2025-09-21T14:50:00"
+const TOGETHER_DATE = "2006-09-29T00:00:00"
+
+// --- MusicPlayer Component ---
+function MusicPlayer({ playSong }) {
   const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef(null)
 
@@ -12,32 +25,22 @@ export default function MusicPlayer({ playSong }) {
     audioRef.current = new Audio("/bg.mp3")
     audioRef.current.loop = true
     audioRef.current.volume = 0.5
-    audioRef.current.muted = true // эхэнд mute
-
-    // Autoplay оролдлого
-    if (playSong) {
-      audioRef.current.play().catch(err => console.error("Autoplay blocked:", err))
-    }
-
-    return () => {
-      if (audioRef.current) {
-        audioRef.current.pause()
-        audioRef.current = null
-      }
-    }
   }, [])
 
   useEffect(() => {
     const audio = audioRef.current
-    if (!audio) return
+    if (!audio || !playSong) return
 
-    if (playSong && !isPlaying) {
-      audio.currentTime = 45 // 45 секундээс эхлэх
-      audio.muted = false
-      audio.play()
-        .then(() => setIsPlaying(true))
-        .catch(err => console.error("Playback error:", err))
+    if (audio.duration > 45) {
+      audio.currentTime = 45
+    } else {
+      audio.currentTime = 0
     }
+
+    audio.muted = false
+    audio.play()
+      .then(() => setIsPlaying(true))
+      .catch(err => console.error("Playback error:", err))
   }, [playSong])
 
   const togglePlayback = () => {
@@ -48,7 +51,11 @@ export default function MusicPlayer({ playSong }) {
       audio.pause()
       setIsPlaying(false)
     } else {
-      audio.currentTime = 45
+      if (audio.duration > 45) {
+        audio.currentTime = 45
+      } else {
+        audio.currentTime = 0
+      }
       audio.muted = false
       audio.play()
         .then(() => setIsPlaying(true))
