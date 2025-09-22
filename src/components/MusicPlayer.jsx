@@ -13,8 +13,8 @@ import Message from "@/components/Message"
 import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
-const ANNIVERSARY_DATE = "2025-09-21T14:50:00"
-const TOGETHER_DATE = "2006-09-29T00:00:00"
+const ANNIVERSARY_DATE = "2025-09-22T23:23:00"
+const TOGETHER_DATE = "2006-09-29T00:01:00"
 
 // --- MusicPlayer Component ---
 function MusicPlayer({ playSong }) {
