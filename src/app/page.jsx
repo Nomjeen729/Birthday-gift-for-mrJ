@@ -12,7 +12,7 @@ import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
 // Change this to your anniversary date
-const ANNIVERSARY_DATE = "2025-09-22T01:43:00"
+const ANNIVERSARY_DATE = "2025-09-22T23:12:00"
 // Change this to the date you got together
 const TOGETHER_DATE = "2006-09-29T00:01:00"
 
@@ -60,7 +60,7 @@ export default function Home() {
     { src: "/IMG_0155.jpeg", alt: "Саанжигийн төрсөн өдрөөр" },
     { src: "/IMG_2595.jpeg", alt: "Бидний домогт пиццатай зайсан гаралт" },
     { src: "/IMG_6886.jpeg", alt: "Өвлийн тэр нэгэн ногоорсон ногоон өдрүүд" },
-    { src: "/IMG_1929.jpeg", alt: "Залуу хүн байж орж гараач, заяаны хань чинь зам дээр хэвтэж байгаа" },
+    { src: "/IMG_0929.jpg", alt: "Байжий, би чамайг хайрладаг шиг тэд нар чамайг хайрладаг уу?" },
   ]
 
   // Change this message according to you
