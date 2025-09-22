@@ -60,7 +60,7 @@ export default function Home() {
     { src: "/IMG_0155.jpeg", alt: "Саанжигийн төрсөн өдрөөр" },
     { src: "/IMG_2595.jpeg", alt: "Бидний домогт пиццатай зайсан гаралт" },
     { src: "/IMG_6886.jpeg", alt: "Өвлийн тэр нэгэн ногоорсон ногоон өдрүүд" },
-    { src: "/IMG_1929.jpg", alt: "Залуу хүн байж орж гараач, заяаны хань чинь зам дээр хэвтэж байгаа" },
+    { src: "/public/att.T_UVfezZy7sYySuKunU4BVuNAHZkzb96EmqvinZhBJY.jpeg", alt: "Залуу хүн байж орж гараач, заяаны хань чинь зам дээр хэвтэж байгаа" },
   ]
 
   // Change this message according to you
