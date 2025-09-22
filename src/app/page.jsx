@@ -7,12 +7,12 @@ import Countdown from "@/components/Countdown"
 import DaysTogether from "@/components/DaysTogether"
 import PhotoGallery from "@/components/PhotoGallery"
 import Message from "@/components/Message"
-//import MusicPlayer from "@/components/MusicPlayer" // Uncomment this if you want to add a background song
+import MusicPlayer from "@/components/MusicPlayer" // Uncomment this if you want to add a background song
 import FloatingElements from "@/components/FloatingElements"
 import TapToReveal from "@/components/TapToReveal"
 
 // Change this to your anniversary date
-const ANNIVERSARY_DATE = "2025-09-22T23:49:00"
+const ANNIVERSARY_DATE = "2025-09-23T00:05:00"
 // Change this to the date you got together
 const TOGETHER_DATE = "2006-09-29T00:01:00"
 
